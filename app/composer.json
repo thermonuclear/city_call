@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "controllers",
+            "Db\\": "db",
+            "Lib\\": "lib"
+        }
+    },
+  "require": {
+    "ext-pdo": "*",
+    "ext-json": "*"
+  }
+}

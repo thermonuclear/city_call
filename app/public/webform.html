@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/vue.js"></script>
+  <title>web form</title>
+</head>
+<body>
+<noscript>
+  <strong>We're sorry but webform doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+
+<div id="app" v-cloak>
+  <form method="post">
+    <div  class="parent">
+      <div>
+        Номер АЗС:
+        <span class="wrap" v-on:blur="closeList('number_azs')">
+          <input type="text" name="number_azs" v-model="selected.number_azs" v-on:focus="changeInput" v-on:input="changeInput">
+          <ul class="autocomplete" v-show="show.number_azs">
+            <li v-for="(item, i) in formLists.number_azs" :key="i" v-on:click="selectValue(item, 'number_azs')">
+              {{ item }}
+            </li>
+          </ul>
+        </span>
+      </div>
+      <div>
+        Регион:
+        <span class="wrap" v-on:blur="closeList('region_azs')">
+          <input type="text" name="region_azs" v-model="selected.region_azs" v-on:focus="changeInput" v-on:input="changeInput">
+          <ul class="autocomplete" v-show="show.region_azs">
+            <li v-for="(item, i) in formLists.region_azs" :key="i" v-on:click="selectValue(item, 'region_azs')">
+              {{ item }}
+            </li>
+          </ul>
+        </span>
+      </div>
+      <div>
+        Город:
+        <span class="wrap" v-on:blur="closeList('city_azs')">
+          <input type="text" name="city_azs" v-model="selected.city_azs" v-on:focus="changeInput" v-on:input="changeInput">
+          <ul class="autocomplete" v-show="show.city_azs">
+            <li v-for="(item, i) in formLists.city_azs" :key="i" v-on:click="selectValue(item, 'city_azs')">
+              {{ item }}
+            </li>
+          </ul>
+        </span>
+      </div>
+      <div>
+        Улица:
+        <span class="wrap" v-on:blur="closeList('street_azs')">
+          <input type="text" name="street_azs" v-model="selected.street_azs" v-on:focus="changeInput" v-on:input="changeInput">
+          <ul class="autocomplete" v-show="show.street_azs">
+            <li v-for="(item, i) in formLists.street_azs" :key="i" v-on:click="selectValue(item, 'street_azs')">
+              {{ item }}
+            </li>
+          </ul>
+        </span>
+      </div>
+    </div>
+    <div class="parent button">
+      <button type="reset" @click="resetForm">Сброс</button>
+    </div>
+  </form>
+</div>
+<script src="/js/webform.js"></script>
+</body>
+</html>

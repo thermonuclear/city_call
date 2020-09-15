@@ -1,0 +1,46 @@
+.parent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.parent > div {
+    padding: 10px;
+}
+.wrap {
+    display: inline-block;
+    position: relative
+}
+.autocomplete {
+    position: absolute;margin: 0;padding: 0;
+    border: 1px solid aquamarine;
+    width: 100%;
+    font-size: 14px;
+    /*text-transform: lowercase;*/
+    height: 200px;
+    overflow-y: scroll;
+}
+.autocomplete li {
+    list-style-type: none;
+    padding: 1px 1px 1px 6px;
+    cursor: pointer;
+}
+.autocomplete li:hover {
+    color: brown;
+}
+[v-cloak] {
+    display: none;
+}
+.button {
+    margin-top: 20px;
+}
+
+.button button {
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
