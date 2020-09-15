@@ -5,7 +5,7 @@
 поднятие докер в папке docker_cc: docker-compose up -d
 автозагрузчик в папке app в контейнере php-fpm (docker-compose exec php-fpm /bin/bash) выполнить: composer install
 для работы нужно в базу app подгрузить данные из sql.zip
-phpadmin после поднятия докера доступен по http://localhost:8080/
+phpmyadmin после поднятия докера доступен по http://localhost:8080/
 mysql: user app pass app либо user root pass root
 на локалке в hosts добавить: 127.0.0.1 city-call.test 
 # задача 1
